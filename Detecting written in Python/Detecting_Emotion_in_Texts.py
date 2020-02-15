@@ -577,6 +577,11 @@ stopWords = ['a', 'agora', 'algum', 'alguma', 'aquele', 'aqueles', 'de', 'deu', 
 
 # Doing stopWords with library NLTK (Portuguese language)
 stopWordsNLTK = nltk.corpus.stopwords.words('portuguese')
+
+# Adding the Stop Words manually that doesn't have in "nltk.corpus.stopwords"
+stopWordsNLTK.append('vou')
+stopWordsNLTK.append('vai')
+stopWordsNLTK.append('tão')
 print(stopWordsNLTK)
 
 '''
@@ -656,7 +661,7 @@ print(classifier.labels())
 print(classifier.show_most_informative_features(20))
 
 # Extracting radical of phrases of input (preprocessing of text)
-test = "Estou apavorado com a situação"
+test = "Eu sinto amor por você"
 
 testStemming = []
 stemmer = nltk.stem.RSLPStemmer()
