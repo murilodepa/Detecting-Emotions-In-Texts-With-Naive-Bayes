@@ -102,3 +102,13 @@ print(baseComplete)
 
 # Build the probability table
 classifier = nltk.NaiveBayesClassifier.train(baseComplete)
+
+# Analyzing the impressions obtained through the probability table
+
+# Label printing of dataset
+#print(classifier.labels())
+
+# Print more informative attributes
+#print(classifier.show_most_informative_features(20))
+
+
