@@ -24,6 +24,7 @@ base = [('eu sou admirada por muitos','alegria'),
         ('eu tenho muito medo dele', 'medo'),
         ('estou com medo do resultado dos meus testes', 'medo')]
 
+# Dataset baseTraining (70 %)
 baseTraining = [('este trabalho e agradável','alegria'),
                 ('gosto de ficar no seu aconchego','alegria'),
                 ('fiz a adesão ao curso hoje','alegria'),
@@ -568,6 +569,241 @@ baseTraining = [('este trabalho e agradável','alegria'),
                 ('aquele que nunca viu a tristeza nunca reconhecerá a alegria','tristeza'),
                 ('cuidado com a tristeza ela e um vicio','tristeza')]
 
+# Dataset baseTest (30 %)
+baseTest = [('não precisei pagar o ingresso','alegria'),
+            ('se eu ajeitar tudo fica bem','alegria'),
+            ('minha fortuna ultrapassa a sua','alegria'),
+            ('sou muito afortunado','alegria'),
+            ('e benefico para todos esta nova medida','alegria'),
+            ('ficou lindo','alegria'),
+            ('achei esse sapato muito simpático','alegria'),
+            ('estou ansiosa pela sua chegada','alegria'),
+            ('congratulações pelo seu aniversário','alegria'),
+            ('delicadamente ele a colocou para dormir','alegria'),
+            ('a musica e linda','alegria'),
+            ('sem musica eu não vivo','alegria'),
+            ('conclui uma tarefa muito difícil','alegria'),
+            ('conclui minha graduação','alegria'),
+            ('estou muito contente com tudo','alegria'),
+            ('eu confio em você','alegria'),
+            ('e um prazer conhecê-lo','alegria'),
+            ('o coleguismo de vocês e animador','alegria'),
+            ('estou aproveitando as ferias','alegria'),
+            ('vamos aproveitar as ferias','alegria'),
+            ('e muito divertido este jogo','alegria'),
+            ('vamos ter muita diversão','alegria'),
+            ('não achei que me divertiria tanto assim','alegria'),
+            ('vou consentir o orçamento ao cliente','alegria'),
+            ('com o consentimento dos meus pais podemos nos casar','alegria'),
+            ('eu adorei este perfume','alegria'),
+            ('sua bondade e cativante','alegria'),
+            ('estou despreocupada','alegria'),
+            ('não me preocupo com o que aconteceu','alegria'),
+            ('me sinto completamente segura','alegria'),
+            ('estimo muito o seu trabalho','alegria'),
+            ('somos estimados por nossa família','alegria'),
+            ('concretizamos nossa ideia','alegria'),
+            ('nosso ideal foi alcançado','alegria'),
+            ('estamos muito felizes juntos','alegria'),
+            ('estou tão animada com os preparativos para o casamento','alegria'),
+            ('você será muito amado meu filho','alegria'),
+            ('os apaixonados são maravilhosos','alegria'),
+            ('agradeço imensamente o seu apoio nestes dias','alegria'),
+            ('esta comida me parece muito atraente','alegria'),
+            ('você me completa','alegria'),
+            ('poderemos completar o projeto hoje!','alegria'),
+            ('estamos namorando','alegria'),
+            ('estou namorando este vestido a um tempo','alegria'),
+            ('pude comprar meu celular hoje','alegria'),
+            ('e um deleite poder compartilhar minhas vitórias','alegria'),
+            ('ela e um boa garota','alegria'),
+            ('estivemos em um ótimo show','alegria'),
+
+            ('o mundo e feio como o pecado','desgosto'),
+            ('a coisa mais difícil de esconder e aquilo que não existe','desgosto'),
+            ('você errou feio aquele gol','desgosto'),
+            ('nunca vou me casar sou muito feia','desgosto'),
+            ('os golpes da adversidade são terrivelmente amargos','desgosto'),
+            ('os homem ficam terrivelmente chatos','desgosto'),
+            ('abominavelmente convencido','desgosto'),
+            ('terrivelmente irritado','desgosto'),
+            ('as instituições publicas estão terrivelmente decadentes','desgosto'),
+            ('a população viveu em isolamento por muito tempo','desgosto'),
+            ('estou terrivelmente preocupada','desgosto'),
+            ('o nacionalismo e uma doença infantil','desgosto'),
+            ('se me es antipático a minha negação esta pronta','desgosto'),
+            ('muitos documentários sobre esse casal antipático','desgosto'),
+            ('sua beleza não desfaça sua antipatia','desgosto'),
+            ('esta e uma experiência desagradável','desgosto'),
+            ('desagradável estrago nos banheiros','desgosto'),
+            ('o mais irritante no amor e que se trata de um crime que precisa de um cúmplice','desgosto'),
+            ('a situação nos causa grande incomodo','desgosto'),
+            ('estou preocupado com o incomodo na garganta','desgosto'),
+            ('simplesmente não quero amolação da policia','desgosto'),
+            ('você e uma criaturinha muito impertinente','desgosto'),
+            ('o peso e a dor da vida','desgosto'),
+            ('me arrependo amargamente de minhas ações','desgosto'),
+            ('o destino e cruel e os homens não são dignos de compaixão','desgosto'),
+            ('o ódio conduz ao isolamento cruel e ao desespero','desgosto'),
+            ('encerrou com o massacre mais repudiável e asqueroso que se conhece','desgosto'),
+            ('de mal gosto e asqueroso','desgosto'),
+            ('tudo e inserto neste mundo hediondo','desgosto'),
+            ('o crime de corrupção e um crime hediondo','desgosto'),
+            ('o rio esta fetido e de cor escura','desgosto'),
+            ('muito lixo no rio o deixa malcheiroso','desgosto'),
+            ('existe uma laranja podre no grupo e já desconfiamos quem e','desgosto'),
+            ('foi de repente estou machucado e me sentindo enjoado','desgosto'),
+            ('eu fiquei enojado','desgosto'),
+            ('daqui alguns meses vou embora deste pais que já estou nauseado','desgosto'),
+
+            ('que abominável esse montro!','medo'),
+            ('vamos alarmar a todos sobre a situação','medo'),
+            ('estou amedrontada','medo'),
+            ('estou com muito medo da noite','medo'),
+            ('ele esta me ameaçando a dias','medo'),
+            ('quanta angustia','medo'),
+            ('estou angustiada','medo'),
+            ('angustiadamente vou sair e casa','medo'),
+            ('isso me deixa apavorada','medo'),
+            ('você esta me apavorando','medo'),
+            ('estou desconfiada de você','medo'),
+            ('não confio em você','medo'),
+            ('ate o cachorro está apavorado','medo'),
+            ('estou assustado com as ações do meu colega','medo'),
+            ('agora se sente humilhado, apavorado','medo'),
+            ('assustou a população e provocou mortes','medo'),
+            ('estou com dificuldades para respirar e muito assustado','medo'),
+            ('os policiais se assustaram quando o carro capotou','medo'),
+            ('o trabalhador e assombrado pelo temor do desemprego','medo'),
+            ('este lugar e mal assombrado','medo'),
+            ('estou assombrado pela crise financeira','medo'),
+            ('mesmo aterrorizado lembro de você','medo'),
+            ('aterrorizado e suando frio','medo'),
+            ('um grupo de elefantes selvagens tem aterrorizado vilas','medo'),
+            ('me sinto intimidada pela sua presença','medo'),
+            ('tenho medo de ser advertida novamente','medo'),
+            ('estou correndo o risco de ser advertido','medo'),
+            ('estou correndo riscos de saúde','medo'),
+            ('os riscos são reais','medo'),
+            ('podemos perder muito dinheiro com essa investida','medo'),
+            ('socorro, fui intimado a depor','medo'),
+            ('fui notificado e estou com medo de perde a guarda da minha filha','medo'),
+            ('estou angustiada com meus filhos na rua','medo'),
+            ('e abominável o que fazem com os animais','medo'),
+            ('foi terrível o tigre quase o matou','medo'),
+            ('me advertiram sobre isso','medo'),
+
+            ('ate que enfim, não agüentava mais te esperar','raiva'),
+            ('eu quero meu dinheiro de volta agora!','raiva'),
+            ('eu odeio a escola!','raiva'),
+            ('vou fazer picadinho de você','raiva'),
+            ('detesto trabalhar no verão','raiva'),
+            ('quero minha comida, e quero agora!','raiva'),
+            ('melhor você recolher minhas compras agora!','raiva'),
+            ('quero descer agora sua maluca','raiva'),
+            ('vou reclamar com o gerente!','raiva'),
+            ('vai engolir o que disse!','raiva'),
+            ('ele me ridiculariza diante de todos','raiva'),
+            ('não quero mais saber de você','raiva'),
+            ('vejo você na cadeia safado!','raiva'),
+            ('agora vou ter que pagar mais isso ainda!','raiva'),
+            ('saia logo do banheiro!','raiva'),
+            ('suba já para o seu quarto!','raiva'),
+            ('eu falei para calar a boca seu idiota!','raiva'),
+            ('eu disse para você cair fora!','raiva'),
+            ('não agüento mais que fiquem me culpando sem motivo!','raiva'),
+            ('não suporto olhar na sua cara!','raiva'),
+            ('eu não sou um elefante','raiva'),
+            ('juro que se olhar pra mim eu o mato!','raiva'),
+            ('chega, não quero saber mais deste assunto','raiva'),
+            ('como pode ser tão burro?','raiva'),
+            ('não me aborreça seu moleque','raiva'),
+            ('não quero me aborrecer com estas bobagens','raiva'),
+            ('ele me agrediu!','raiva'),
+            ('eu amaldiçôo você e a sua família','raiva'),
+            ('não me amole','raiva'),
+            ('não venha me amolar','raiva'),
+            ('isso tudo e uma tormenta','raiva'),
+            ('eu vou matar você','raiva'),
+            ('para que simplificar se você pode sempre complicar','raiva'),
+            ('isso esta me enlouquecendo','raiva'),
+            ('estou furiosa com você','raiva'),
+            ('isso mesmo fique furioso','raiva'),
+
+            ('esses livros são magníficos','surpresa'),
+            ('esse vinho e magnífico','surpresa'),
+            ('seria magnífico ver o esperaculo','surpresa'),
+            ('o casamento foi estupendo','surpresa'),
+            ('e um jogador bárbaro estupendo','surpresa'),
+            ('esse dia esta excelente','surpresa'),
+            ('o cantor estava excelente','surpresa'),
+            ('o universo e assombroso','surpresa'),
+            ('o amor e sublime','surpresa'),
+            ('sua sublime atuação','surpresa'),
+            ('e formidável meu caro walter','surpresa'),
+            ('como e formidável a presença de todos','surpresa'),
+            ('e formidável ter a quem dizer adeus','surpresa'),
+            ('e um conselheiro formidável o seu','surpresa'),
+            ('o artigo foi formidável','surpresa'),
+            ('pica pau e um destaque no imaginário brasileiro','surpresa'),
+            ('ah! o absoluto do imaginário','surpresa'),
+            ('isso foi surreal','surpresa'),
+            ('uma historia completamente surreal','surpresa'),
+            ('essas pinturas beiram o surreal','surpresa'),
+            ('você nem acreditam de tão surreal','surpresa'),
+            ('incrível!','surpresa'),
+            ('fiquei pasma com tudo isso','surpresa'),
+            ('você me deixa pasmo','surpresa'),
+            ('estou admirado com a sua astucia','surpresa'),
+            ('que bela surpresa você me fez','surpresa'),
+            ('não acredito que fez isso!','surpresa'),
+            ('isso foi apavorante','surpresa'),
+            ('isso tão de repente','surpresa'),
+            ('estou chocada com isso','surpresa'),
+            ('estou surpresa e desconsertada','surpresa'),
+            ('esta realmente deslumbrante querida','surpresa'),
+            ('fiquei completamente sem plavras','surpresa'),
+            ('e espantoso o modo como ele nos olha','surpresa'),
+            ('incrivel você estar aqui','surpresa'),
+            ('que fantástica festa minha querida','surpresa'),
+
+            ('isso tudo e um erro','tristeza'),
+            ('eu sou errada eu sou errante','tristeza'),
+            ('tenho muito dó do cachorro','tristeza'),
+            ('e dolorida a perda de um filho','tristeza'),
+            ('essa tragedia vai nos abalar para sempre','tristeza'),
+            ('perdi meus filhos','tristeza'),
+            ('perdi meu curso','tristeza'),
+            ('sou só uma chorona','tristeza'),
+            ('você e um chorão','tristeza'),
+            ('se arrependimento matasse','tristeza'),
+            ('me sinto deslocado em sala de aula','tristeza'),
+            ('foi uma passagem fúnebre','tristeza'),
+            ('nossa condolências e tristeza a sua perda','tristeza'),
+            ('desanimo, raiva, solidão ou vazies, depressão','tristeza'),
+            ('vivo te desanimando','tristeza'),
+            ('estou desanimado','tristeza'),
+            ('imperador sanguinário, depravado e temeroso','tristeza'),
+            ('meu ser esta em agonia','tristeza'),
+            ('este atrito entre nos tem que acabar','tristeza'),
+            ('a escuridão desola meu ser','tristeza'),
+            ('sua falsa preocupação','tristeza'),
+            ('sua falsidade me entristece','tristeza'),
+            ('quem esta descontente com os outros esta descontente consigo próprio','tristeza'),
+            ('a torcida esta descontente com a demissão do tecnico','tristeza'),
+            ('estou bastante aborrecido com o jornal','tristeza'),
+            ('me sinto solitário e entediado','tristeza'),
+            ('a vida e solitária para aqueles que não são falsos','tristeza'),
+            ('como com compulsão depois da depressão','tristeza'),
+            ('estou me desencorajando a viver','tristeza'),
+            ('ele desencoraja minhas vontades','tristeza'),
+            ('isso vai deprimindo por dentro','tristeza'),
+            ('acho que isso e defeituoso','tristeza'),
+            ('os remedios me derrubam na cama','tristeza'),
+            ('a depressão vai me derrubar','tristeza'),
+            ('suas desculpas são falsas','tristeza'),
+            ('não magoe as pessoas','tristeza')]
+
 '''
 # Doing stopWords manually
 stopWords = ['a', 'agora', 'algum', 'alguma', 'aquele', 'aqueles', 'de', 'deu', 'do', 'e', 'estou', 'esta', 'esta',
@@ -605,8 +841,10 @@ def applyingStemmer(text):
             phrasesStemming.append((withStemming, emotion))
     return phrasesStemming
 
-phrasesWithStremming = applyingStemmer(baseTraining)
-print(phrasesWithStremming)
+phrasesWithStremmingTraining = applyingStemmer(baseTraining)
+phrasesWithStremmingTest = applyingStemmer(baseTest)
+print(phrasesWithStremmingTraining)
+print(phrasesWithStremmingTest)
 
 # Search only words without emotions (with preprocessing)
 def searchTheWords(phrases):
@@ -615,30 +853,36 @@ def searchTheWords(phrases):
              allTheWords.extend(words)
      return allTheWords
 
-onlyTheWords = searchTheWords(phrasesWithStremming)
-print(onlyTheWords)
+onlyTheWordsTraining = searchTheWords(phrasesWithStremmingTraining)
+onlyTheWordsTest = searchTheWords(phrasesWithStremmingTest)
+print(onlyTheWordsTraining)
+print(onlyTheWordsTest)
 
 # Extraction of frequency that each word appears
 def searchThefrequency(words):
     words = nltk.FreqDist(words)
     return words
 
-frequency = searchThefrequency(onlyTheWords)
-print(frequency.most_common(50))
+frequencyTraining = searchThefrequency(onlyTheWordsTraining)
+frequencyTest = searchThefrequency(onlyTheWordsTest)
+print(frequencyTraining.most_common(50))
+print(frequencyTest.most_common(50))
 
 # Removing repeated words
 def searchTheWordsOnly(frequency):
     freq = frequency.keys()
     return freq
 
-wordsOnly = searchTheWordsOnly(frequency)
-print(wordsOnly)
+wordsOnlyTraining = searchTheWordsOnly(frequencyTraining)
+wordsOnlyTest = searchTheWordsOnly(frequencyTest)
+print(wordsOnlyTraining)
+print(wordsOnlyTest)
 
 # Check which word has or does not have, in the sentence passed by parameter
 def extractorWords(document):
     doc = set(document)
     characteristics = {}
-    for words in wordsOnly:
+    for words in wordsOnlyTraining:
         characteristics['%s' % words] = (words in doc)
     return characteristics
 
@@ -646,18 +890,20 @@ def extractorWords(document):
 # print(characteristicsPhrase)
 
 # Analyzes all sentences verifying if have each word do dataset (with preprocessing)
-baseComplete = nltk.classify.apply_features(extractorWords, phrasesWithStremming)
-print(baseComplete)
+baseCompleteTraining = nltk.classify.apply_features(extractorWords, phrasesWithStremmingTraining)
+baseCompleteTest = nltk.classify.apply_features(extractorWords, phrasesWithStremmingTest)
+print(baseCompleteTraining)
+print(baseCompleteTest)
 
 # Build the probability table
-classifier = nltk.NaiveBayesClassifier.train(baseComplete)
+classifier = nltk.NaiveBayesClassifier.train(baseCompleteTraining)
 
 # Analyzing the impressions obtained through the probability table
 
-# Label printing of dataset
+## Label printing of dataset
 print(classifier.labels())
 
-# Print more informative attributes
+## Print more informative attributes
 print(classifier.show_most_informative_features(20))
 
 # Extracting radical of phrases of input (preprocessing of text)
