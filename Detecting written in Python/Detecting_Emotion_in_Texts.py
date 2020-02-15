@@ -82,5 +82,16 @@ def searchTheWordsOnly(frequency):
     freq = frequency.keys()
     return freq
 
-worksOnly = searchTheWordsOnly(frequency)
-print(worksOnly)
+wordsOnly = searchTheWordsOnly(frequency)
+print(wordsOnly)
+
+# Check which word has or does not have, in the sentence passed by parameter
+def extractorWords(document):
+    doc = set(document)
+    characteristics = {}
+    for words in wordsOnly:
+        characteristics['%s' % words] = (words in doc)
+    return characteristics
+
+characteristicsPhrase = extractorWords(['am', 'nov', 'dia'])
+print(characteristicsPhrase)
