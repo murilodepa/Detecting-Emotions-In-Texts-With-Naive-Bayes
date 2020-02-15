@@ -23,8 +23,11 @@ base = [('eu sou admirada por muitos','alegria'),
         ('eu tenho muito medo dele', 'medo'),
         ('estou com medo do resultado dos meus testes', 'medo')]
 
-
+'''
 stopWords = ['a', 'agora', 'algum', 'alguma', 'aquele', 'aqueles', 'de', 'deu', 'do', 'e', 'estou', 'esta', 'esta',
              'ir', 'meu', 'muito', 'mesmo', 'no', 'nossa', 'o', 'outro', 'para', 'que', 'sem', 'talvez', 'tem', 'tendo',
              'tenha', 'teve', 'tive', 'todo', 'um', 'uma', 'umas', 'uns', 'vou']
+'''
 
+stopWordsNLTK = nltk.corpus.stopwords.words('portuguese')
+print(stopWordsNLTK)
