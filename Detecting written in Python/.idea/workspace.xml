@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4283c0d7-381d-4bbb-b194-12ac00ab460c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Detecting_Emotion_in_Texts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Detecting_Emotion_in_Texts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
