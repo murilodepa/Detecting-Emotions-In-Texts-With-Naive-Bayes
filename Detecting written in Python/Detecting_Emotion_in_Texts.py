@@ -2,6 +2,7 @@ import nltk
 
 #nltk.download()
 
+# Dataset base
 base = [('eu sou admirada por muitos','alegria'),
         ('me sinto completamente amado','alegria'),
         ('amar e maravilhoso','alegria'),
@@ -24,14 +25,21 @@ base = [('eu sou admirada por muitos','alegria'),
         ('estou com medo do resultado dos meus testes', 'medo')]
 
 '''
+# Doing stopWords manually
 stopWords = ['a', 'agora', 'algum', 'alguma', 'aquele', 'aqueles', 'de', 'deu', 'do', 'e', 'estou', 'esta', 'esta',
              'ir', 'meu', 'muito', 'mesmo', 'no', 'nossa', 'o', 'outro', 'para', 'que', 'sem', 'talvez', 'tem', 'tendo',
              'tenha', 'teve', 'tive', 'todo', 'um', 'uma', 'umas', 'uns', 'vou']
 '''
 
+# Doing stopWords with library NLTK (Portuguese language)
 stopWordsNLTK = nltk.corpus.stopwords.words('portuguese')
 print(stopWordsNLTK)
 
+'''
+<<<<<<< HEAD
+# Removing Stop Word of dataset 
+=======
+>>>>>>> aad7dff3665b4097afd25daaf2704e7526846e1a
 def removeStopWord(text):
     phrase = []
     for (word, emotion) in text:
@@ -40,4 +48,25 @@ def removeStopWord(text):
     return phrase
 
 print(removeStopWord(base))
+'''
+
+<<<<<<< HEAD
+# Removing Stop Word and radical of words (preprocessing of text)
+=======
+>>>>>>> aad7dff3665b4097afd25daaf2704e7526846e1a
+def applyingStemmer(text):
+    stemmer = nltk.stem.RSLPStemmer()
+    phrasesStemming = []
+    for (word, emotion) in text:
+            withStemming = [str(stemmer.stem(w)) for w in word.split() if w not in stopWordsNLTK]
+            phrasesStemming.append((withStemming, emotion))
+    return phrasesStemming
+
+phrasesWithStremming = applyingStemmer(base)
+<<<<<<< HEAD
+print(phrasesWithStremming)
+
+
+=======
+>>>>>>> aad7dff3665b4097afd25daaf2704e7526846e1a
 
