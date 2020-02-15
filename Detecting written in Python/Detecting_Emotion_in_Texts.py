@@ -69,4 +69,13 @@ def searchTheWords(phrases):
 onlyTheWords = searchTheWords(phrasesWithStremming)
 print(onlyTheWords)
 
+# Extraction of frequency that each word appears
+def searchThefrequency(words):
+    words = nltk.FreqDist(words)
+    return words
+
+frequency = searchThefrequency(onlyTheWords)
+print(frequency.most_common(50))
+
+
 
