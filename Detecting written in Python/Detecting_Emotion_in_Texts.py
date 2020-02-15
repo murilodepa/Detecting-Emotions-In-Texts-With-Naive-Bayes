@@ -122,4 +122,8 @@ for (words) in test.split():
 
 print(testStemming)
 
+# Comparing if each word of input have in dataset
+new = extractorWords(testStemming)
+print(new)
+
 
