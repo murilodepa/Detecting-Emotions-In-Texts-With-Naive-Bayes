@@ -93,5 +93,9 @@ def extractorWords(document):
         characteristics['%s' % words] = (words in doc)
     return characteristics
 
-characteristicsPhrase = extractorWords(['am', 'nov', 'dia'])
-print(characteristicsPhrase)
+# characteristicsPhrase = extractorWords(['am', 'nov', 'dia'])
+# print(characteristicsPhrase)
+
+# Analyzes all sentences verifying if have each word do dataset (with preprocessing)
+baseComplete = nltk.classify.apply_features(extractorWords, phrasesWithStremming)
+print(baseComplete)
