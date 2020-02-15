@@ -112,7 +112,7 @@ classifier = nltk.NaiveBayesClassifier.train(baseComplete)
 #print(classifier.show_most_informative_features(20))
 
 # Extracting radical of phrases of input (preprocessing of text)
-test = "eu sinto amor por voce"
+test = "Estou apavorado com a situação"
 
 testStemming = []
 stemmer = nltk.stem.RSLPStemmer()
@@ -127,6 +127,9 @@ new = extractorWords(testStemming)
 print(new)
 
 # Printing the classification of the entered phrase
-print(classificador.classify(novo))
+print(classifier.classify(new))
 
-
+# Printing the classification of each class
+distribution = classifier.prob_classify(new)
+for classe in distribution.samples():
+        print("%s: %f" % (classe, distribution.prob(classe)))
