@@ -59,5 +59,14 @@ def applyingStemmer(text):
 phrasesWithStremming = applyingStemmer(base)
 print(phrasesWithStremming)
 
+# Search only words without emotions (with preprocessing)
+def searchTheWords(phrases):
+     allTheWords = []
+     for(words, emotion) in phrases:
+             allTheWords.extend(words)
+     return allTheWords
+
+onlyTheWords = searchTheWords(phrasesWithStremming)
+print(onlyTheWords)
 
 
