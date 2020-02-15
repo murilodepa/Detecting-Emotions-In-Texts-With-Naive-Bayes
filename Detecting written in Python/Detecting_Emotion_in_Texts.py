@@ -31,3 +31,13 @@ stopWords = ['a', 'agora', 'algum', 'alguma', 'aquele', 'aqueles', 'de', 'deu', 
 
 stopWordsNLTK = nltk.corpus.stopwords.words('portuguese')
 print(stopWordsNLTK)
+
+def removeStopWord(text):
+    phrase = []
+    for (word, emotion) in text:
+            withOutStop = [w for w in word.split() if w not in stopWordsNLTK]
+            phrase.append((withOutStop, emotion))
+    return phrase
+
+print(removeStopWord(base))
+
