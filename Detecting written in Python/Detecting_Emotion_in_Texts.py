@@ -36,10 +36,7 @@ stopWordsNLTK = nltk.corpus.stopwords.words('portuguese')
 print(stopWordsNLTK)
 
 '''
-<<<<<<< HEAD
 # Removing Stop Word of dataset 
-=======
->>>>>>> aad7dff3665b4097afd25daaf2704e7526846e1a
 def removeStopWord(text):
     phrase = []
     for (word, emotion) in text:
@@ -50,10 +47,7 @@ def removeStopWord(text):
 print(removeStopWord(base))
 '''
 
-<<<<<<< HEAD
 # Removing Stop Word and radical of words (preprocessing of text)
-=======
->>>>>>> aad7dff3665b4097afd25daaf2704e7526846e1a
 def applyingStemmer(text):
     stemmer = nltk.stem.RSLPStemmer()
     phrasesStemming = []
@@ -63,10 +57,7 @@ def applyingStemmer(text):
     return phrasesStemming
 
 phrasesWithStremming = applyingStemmer(base)
-<<<<<<< HEAD
 print(phrasesWithStremming)
 
 
-=======
->>>>>>> aad7dff3665b4097afd25daaf2704e7526846e1a
 
