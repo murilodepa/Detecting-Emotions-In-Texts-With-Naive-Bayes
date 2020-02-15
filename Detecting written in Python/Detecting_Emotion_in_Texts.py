@@ -47,7 +47,7 @@ def removeStopWord(text):
 print(removeStopWord(base))
 '''
 
-# Removing Stop Word and radical of words (preprocessing of text)
+# Removing Stop Word and extracting radical of words of dataset (preprocessing of text)
 def applyingStemmer(text):
     stemmer = nltk.stem.RSLPStemmer()
     phrasesStemming = []
@@ -110,5 +110,16 @@ classifier = nltk.NaiveBayesClassifier.train(baseComplete)
 
 # Print more informative attributes
 #print(classifier.show_most_informative_features(20))
+
+# Extracting radical of phrases of input (preprocessing of text)
+test = "eu sinto amor por voce"
+
+testStemming = []
+stemmer = nltk.stem.RSLPStemmer()
+for (words) in test.split():
+    withStem = [w for w in words.split()]
+    testStemming.append(str(stemmer.stem(withStem[0])))
+
+print(testStemming)
 
 
