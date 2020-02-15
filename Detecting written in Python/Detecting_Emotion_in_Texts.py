@@ -126,4 +126,7 @@ print(testStemming)
 new = extractorWords(testStemming)
 print(new)
 
+# Printing the classification of the entered phrase
+print(classificador.classify(novo))
+
 
