@@ -77,5 +77,10 @@ def searchThefrequency(words):
 frequency = searchThefrequency(onlyTheWords)
 print(frequency.most_common(50))
 
+# Removing repeated words
+def searchTheWordsOnly(frequency):
+    freq = frequency.keys()
+    return freq
 
-
+worksOnly = searchTheWordsOnly(frequency)
+print(worksOnly)
