@@ -952,25 +952,29 @@ print(matriz)
 ## 2 - NUMBER OF CLASS - (16%)
 ## 3 - ALGORITHM ZERORULES - (21,05%)
 
-# Extracting radical of phrases of input (preprocessing of text)
-test = "Eu sinto amor por você"
+# Implementing data entry, for the user to type any other phrase to be classified
+Check = input("Do you want to classify another sentence (yes or no)? \nR: ")
+Check = Check.lower()
 
-testStemming = []
-stemmer = nltk.stem.RSLPStemmer()
-for (words) in test.split():
-    withStem = [w for w in words.split()]
-    testStemming.append(str(stemmer.stem(withStem[0])))
+if(Check == "yes"):
+        # Extracting radical of phrases of input (preprocessing of text)
+        test = input("\nType in the phrase: ")
+        testStemming = []
+        stemmer = nltk.stem.RSLPStemmer()
+        for (words) in test.split():
+            withStem = [w for w in words.split()]
+            testStemming.append(str(stemmer.stem(withStem[0])))
 
-#print(testStemming)
+        #print(testStemming)
 
-# Comparing if each word of input have in dataset
-new = extractorWords(testStemming)
-#print(new)
+        # Comparing if each word of input have in dataset
+        new = extractorWords(testStemming)
+        #print(new)
 
-# Printing the classification of the entered phrase
-#print('RESULT: %s' %(classifier.classify(new)))
+        # Printing the classification of the entered phrase
+        print('\nRESULT: %s' %(classifier.classify(new)))
 
-# Printing the classification of each class
-distribution = classifier.prob_classify(new)
-#for classe in distribution.samples():
-#        print("%s: %f" % (classe, distribution.prob(classe)))
+        # Printing the classification of each class
+        distribution = classifier.prob_classify(new)
+        #for classe in distribution.samples():
+        #        print("%s: %f" % (classe, distribution.prob(classe)))
