@@ -907,7 +907,12 @@ print(classifier.labels())
 print(classifier.show_most_informative_features(20))
 
 ## Analyzing accuracy of the classifier
-print(nltk.classify.accuracy(classifier, baseCompleteTest))
+print('ACCURACY: %s' %(nltk.classify.accuracy(classifier, baseCompleteTest)))
+
+# ALGORITHM ANALYZE
+## 1 - TO EVALUATE THE SCENARIO
+## 2 - NUMBER OF CLASS - (16%)
+## 3 - ALGORITHM ZERORULES - (21,05%)
 
 # Extracting radical of phrases of input (preprocessing of text)
 test = "Eu sinto amor por você"
