@@ -818,7 +818,7 @@ stopWordsNLTK = nltk.corpus.stopwords.words('portuguese')
 stopWordsNLTK.append('vou')
 stopWordsNLTK.append('vai')
 stopWordsNLTK.append('tão')
-print(stopWordsNLTK)
+#print(stopWordsNLTK)
 
 '''
 # Removing Stop Word of dataset 
@@ -843,8 +843,8 @@ def applyingStemmer(text):
 
 phrasesWithStremmingTraining = applyingStemmer(baseTraining)
 phrasesWithStremmingTest = applyingStemmer(baseTest)
-print(phrasesWithStremmingTraining)
-print(phrasesWithStremmingTest)
+#print(phrasesWithStremmingTraining)
+#print(phrasesWithStremmingTest)
 
 # Search only words without emotions (with preprocessing)
 def searchTheWords(phrases):
@@ -855,8 +855,8 @@ def searchTheWords(phrases):
 
 onlyTheWordsTraining = searchTheWords(phrasesWithStremmingTraining)
 onlyTheWordsTest = searchTheWords(phrasesWithStremmingTest)
-print(onlyTheWordsTraining)
-print(onlyTheWordsTest)
+#print(onlyTheWordsTraining)
+#print(onlyTheWordsTest)
 
 # Extraction of frequency that each word appears
 def searchThefrequency(words):
@@ -865,8 +865,8 @@ def searchThefrequency(words):
 
 frequencyTraining = searchThefrequency(onlyTheWordsTraining)
 frequencyTest = searchThefrequency(onlyTheWordsTest)
-print(frequencyTraining.most_common(50))
-print(frequencyTest.most_common(50))
+#print(frequencyTraining.most_common(50))
+#print(frequencyTest.most_common(50))
 
 # Removing repeated words
 def searchTheWordsOnly(frequency):
@@ -875,8 +875,8 @@ def searchTheWordsOnly(frequency):
 
 wordsOnlyTraining = searchTheWordsOnly(frequencyTraining)
 wordsOnlyTest = searchTheWordsOnly(frequencyTest)
-print(wordsOnlyTraining)
-print(wordsOnlyTest)
+#print(wordsOnlyTraining)
+#print(wordsOnlyTest)
 
 # Check which word has or does not have, in the sentence passed by parameter
 def extractorWords(document):
@@ -892,8 +892,8 @@ def extractorWords(document):
 # Analyzes all sentences verifying if have each word do dataset (with preprocessing)
 baseCompleteTraining = nltk.classify.apply_features(extractorWords, phrasesWithStremmingTraining)
 baseCompleteTest = nltk.classify.apply_features(extractorWords, phrasesWithStremmingTest)
-print(baseCompleteTraining)
-print(baseCompleteTest)
+#print(baseCompleteTraining)
+#print(baseCompleteTest)
 
 # Build the probability table
 classifier = nltk.NaiveBayesClassifier.train(baseCompleteTraining)
@@ -901,20 +901,20 @@ classifier = nltk.NaiveBayesClassifier.train(baseCompleteTraining)
 # Analyzing the impressions obtained through the probability table
 
 ## Label printing of dataset
-print(classifier.labels())
+print('\n FOUND LABELS: %s' %(classifier.labels()))
 
 ## Print more informative attributes
-print(classifier.show_most_informative_features(20))
+#print(classifier.show_most_informative_features(20))
 
 ## Analyzing accuracy of the classifier
-print('ACCURACY: %s' %(nltk.classify.accuracy(classifier, baseCompleteTest)))
+print('\n ACCURACY: %s' %(nltk.classify.accuracy(classifier, baseCompleteTest)))
 
 # Analyze the results accused as error
 errors = []
 
 for (phrase, classe) in baseCompleteTest:
-    print(phrase)
-    print(classe)
+    #print(phrase)
+    #print(classe)
     result = classifier.classify(phrase)
 
     if result != classe:
@@ -944,6 +944,7 @@ for (phrase, classe) in baseCompleteTest:
     expected.append(classe)
 
 matriz = ConfusionMatrix(expected, foreseen)
+print('\n \t\t   CONFUSION MATRIX')
 print(matriz)
 
 # ALGORITHM ANALYZE
@@ -960,16 +961,16 @@ for (words) in test.split():
     withStem = [w for w in words.split()]
     testStemming.append(str(stemmer.stem(withStem[0])))
 
-print(testStemming)
+#print(testStemming)
 
 # Comparing if each word of input have in dataset
 new = extractorWords(testStemming)
-print(new)
+#print(new)
 
 # Printing the classification of the entered phrase
-print(classifier.classify(new))
+#print('RESULT: %s' %(classifier.classify(new)))
 
 # Printing the classification of each class
 distribution = classifier.prob_classify(new)
-for classe in distribution.samples():
-        print("%s: %f" % (classe, distribution.prob(classe)))
+#for classe in distribution.samples():
+#        print("%s: %f" % (classe, distribution.prob(classe)))
