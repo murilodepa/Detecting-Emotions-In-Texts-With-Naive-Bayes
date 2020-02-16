@@ -906,6 +906,9 @@ print(classifier.labels())
 ## Print more informative attributes
 print(classifier.show_most_informative_features(20))
 
+## Analyzing accuracy of the classifier
+print(nltk.classify.accuracy(classifier, baseCompleteTest))
+
 # Extracting radical of phrases of input (preprocessing of text)
 test = "Eu sinto amor por você"
 
