@@ -920,8 +920,17 @@ for (phrase, classe) in baseCompleteTest:
     if result != classe:
         errors.append((classe, result, phrase))
 
-for (classe, result, phrase) in errors:
-    print(classe, result, phrase)
+#for (classe, result, phrase) in errors:
+#    print(classe, result, phrase)
+
+#Importing Confusion Matrix (nltk.metrics)
+from nltk.metrics import ConfusionMatrix
+
+# Testing the operation and printing of the Confusion Matrix
+esperado = 'alegria alegria alegria alegria medo medo surpresa surpresa'.split()
+previsto = 'alegria alegria medo surpresa medo medo medo surpresa'.split()
+matriz = ConfusionMatrix(esperado, previsto)
+print(matriz)
 
 # ALGORITHM ANALYZE
 ## 1 - TO EVALUATE THE SCENARIO
