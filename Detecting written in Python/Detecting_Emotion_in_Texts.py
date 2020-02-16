@@ -926,10 +926,24 @@ for (phrase, classe) in baseCompleteTest:
 #Importing Confusion Matrix (nltk.metrics)
 from nltk.metrics import ConfusionMatrix
 
+'''
 # Testing the operation and printing of the Confusion Matrix
-esperado = 'alegria alegria alegria alegria medo medo surpresa surpresa'.split()
-previsto = 'alegria alegria medo surpresa medo medo medo surpresa'.split()
-matriz = ConfusionMatrix(esperado, previsto)
+expected = 'alegria alegria alegria alegria medo medo surpresa surpresa'.split()
+foreseen = 'alegria alegria medo surpresa medo medo medo surpresa'.split()
+matrix = ConfusionMatrix(expected, foreseen)
+print(matrix)
+'''
+
+# Generating Confusion Matrix in algorithm with NLTK resources
+expected = []
+foreseen = []
+
+for (phrase, classe) in baseCompleteTest:
+    result = classifier.classify(phrase)
+    foreseen.append(result)
+    expected.append(classe)
+
+matriz = ConfusionMatrix(expected, foreseen)
 print(matriz)
 
 # ALGORITHM ANALYZE
