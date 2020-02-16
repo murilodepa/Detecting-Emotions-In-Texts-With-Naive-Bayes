@@ -909,6 +909,20 @@ print(classifier.show_most_informative_features(20))
 ## Analyzing accuracy of the classifier
 print('ACCURACY: %s' %(nltk.classify.accuracy(classifier, baseCompleteTest)))
 
+# Analyze the results accused as error
+errors = []
+
+for (phrase, classe) in baseCompleteTest:
+    print(phrase)
+    print(classe)
+    result = classifier.classify(phrase)
+
+    if result != classe:
+        errors.append((classe, result, phrase))
+
+for (classe, result, phrase) in errors:
+    print(classe, result, phrase)
+
 # ALGORITHM ANALYZE
 ## 1 - TO EVALUATE THE SCENARIO
 ## 2 - NUMBER OF CLASS - (16%)
