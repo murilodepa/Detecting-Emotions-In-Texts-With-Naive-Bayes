@@ -953,8 +953,11 @@ print(matriz)
 ## 3 - ALGORITHM ZERORULES - (21,05%)
 
 # Implementing data entry, for the user to type any other phrase to be classified
-Check = input("Do you want to classify another sentence (yes or no)? \nR: ")
-Check = Check.lower()
+while True:
+    Check = input("Do you want to classify another sentence (yes or no)? \nR: ")
+    Check = Check.lower()
+    if (Check == "yes") or (Check == "no"):
+        break
 
 if(Check == "yes"):
         # Extracting radical of phrases of input (preprocessing of text)
